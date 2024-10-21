@@ -14,7 +14,6 @@ public class CustomerEntity {
     private String email;
     private String cpf;
     private AddressEntity addressEntity;
-    private String password;
     private LocalDate lastSession;
     private Boolean isValidCpf;
     private boolean deleted = Boolean.FALSE;

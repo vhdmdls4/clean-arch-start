@@ -13,7 +13,6 @@ public class Customer {
     private String email;
     private String cpf;
     private Address address;
-    private String password;
     private LocalDate lastSession;
     private Boolean isValidCpf;
     private boolean deleted = Boolean.FALSE;
@@ -22,13 +21,12 @@ public class Customer {
         this.isValidCpf = false;
     }
 
-    public Customer(Long id, String name, String email, String cpf, Address address, String password, LocalDate lastSession, Boolean isValidCpf, boolean deleted) {
+    public Customer(Long id, String name, String email, String cpf, Address address, LocalDate lastSession, Boolean isValidCpf, boolean deleted) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.cpf = cpf;
         this.address = address;
-        this.password = password;
         this.isValidCpf = isValidCpf;
     }
 }
