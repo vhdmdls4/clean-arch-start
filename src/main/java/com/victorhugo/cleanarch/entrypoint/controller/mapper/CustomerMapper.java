@@ -1,6 +1,7 @@
 package com.victorhugo.cleanarch.entrypoint.controller.mapper;
 
 import com.victorhugo.cleanarch.core.domain.Customer;
+import com.victorhugo.cleanarch.entrypoint.controller.request.InsertCustomerRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
@@ -11,5 +12,5 @@ public interface CustomerMapper {
     @Mapping(target = "deleted", ignore = true)
     @Mapping(target = "lastSession", ignore = true)
     @Mapping(target = "address", ignore = true)
-    Customer toCustomer(Customer customer);
+    Customer toCustomer(InsertCustomerRequest insertCustomerRequest);
 }
