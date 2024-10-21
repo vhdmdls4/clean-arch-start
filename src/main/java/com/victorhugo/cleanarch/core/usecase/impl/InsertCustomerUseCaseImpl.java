@@ -5,7 +5,9 @@ import com.victorhugo.cleanarch.core.dataprovider.InsertCustomer;
 import com.victorhugo.cleanarch.core.domain.Address;
 import com.victorhugo.cleanarch.core.domain.Customer;
 import com.victorhugo.cleanarch.core.usecase.InsertCustomerUseCase;
+import org.springframework.stereotype.Component;
 
+@Component
 public class InsertCustomerUseCaseImpl implements InsertCustomerUseCase {
 
     private final FindAddressByZipCode findAddressByZipCode;
