@@ -21,7 +21,7 @@ public class FindCustomerByIdImpl implements FindCustomerById {
 
     @Override
     public Optional<Customer> find(final String id) {
-        var customerEntity = customerRepository.findById(id).orElse(null);
-        return customerEntity.map
+        Optional<CustomerEntity> customerEntity = customerRepository.findById(id);
+        return customerEntity.map(customerEntityMapper::toCustomer);
     }
 }
