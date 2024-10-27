@@ -5,8 +5,6 @@ import com.victorhugo.cleanarch.core.domain.Customer;
 import com.victorhugo.cleanarch.core.usecase.FindCustomerByIdUseCase;
 import org.springframework.stereotype.Component;
 
-import java.util.Optional;
-
 @Component
 public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
     private final FindCustomerById findCustomerById;
@@ -16,7 +14,7 @@ public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
     }
 
     @Override
-    public Customer find(final String id) {
+    public Customer find(final Long id) {
         return findCustomerById.find(id).orElseThrow(() -> new RuntimeException("Cliente não encontrado"));
     }
 }

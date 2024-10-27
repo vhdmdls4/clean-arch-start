@@ -30,7 +30,7 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CustomerResponse> findById(@PathVariable final String id) {
+    public ResponseEntity<CustomerResponse> findById(@PathVariable final Long id) {
         Customer customer = findCustomerByIdUseCase.find(id);
         CustomerResponse customerResponse = customerMapper.toCustomerResponse(customer);
         return ResponseEntity.ok(customerResponse);
