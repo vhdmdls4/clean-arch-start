@@ -3,9 +3,7 @@ package com.victorhugo.cleanarch.core.usecase.impl;
 import com.victorhugo.cleanarch.core.dataprovider.FindCustomerById;
 import com.victorhugo.cleanarch.core.domain.Customer;
 import com.victorhugo.cleanarch.core.usecase.FindCustomerByIdUseCase;
-import org.springframework.stereotype.Component;
 
-@Component
 public class FindCustomerByIdUseCaseImpl implements FindCustomerByIdUseCase {
     private final FindCustomerById findCustomerById;
 
